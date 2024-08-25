@@ -90,7 +90,7 @@ Therefore $T_n = \dfrac{1-2^n}{1-2} = 2^n -1$.
 
 
 Now we have found a closed formula for the minimum number of moves need for a Tower of Hanoi with an arbitrary value of $n$.
-
+With this equation we can evaluate the number of moves need for the Tower of Brahma to be $2^{64}-1 = 18,446,744,073,709,551,615$
 
 
 
