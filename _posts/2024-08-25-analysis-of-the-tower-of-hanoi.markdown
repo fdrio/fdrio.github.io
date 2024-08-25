@@ -53,7 +53,7 @@ This gives us an inequality of the form
 
 $$T_n \leq 2T_{n-1} + 1$$
 
-but can we do better? No, because at some point we have to move the largest disk after we moved the $T_{n-1}$ disk and then move $T_{n-1}$ back. Rules $1,2,3$ prevents us from doing any better. Therefore we can write 
+but can we do better? No, because at some point we have to move the largest disk after we moved the $T_{n-1}$ disks and then move $T_{n-1}$ back. Rules $1,2,3$ prevents us from doing any better. Therefore we can write 
 
 $T_n \geq 2T_{n-1} + 1 $
 
