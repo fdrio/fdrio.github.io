@@ -7,7 +7,7 @@ categories: jekyll update
 {%- include mathjax.html -%}
 
 
-![Tower of Hanoi](/assets/images/knuth-von-neumann-principles/Surreal_number_tree.svg.png)
+![Tower of Hanoi](/assets/images/knuth-von-neumann-principles/bramante-staircase.jpg)
 
 # Axioms:
 

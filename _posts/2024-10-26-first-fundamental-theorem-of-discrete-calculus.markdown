@@ -7,62 +7,83 @@ tags: [tag1, tag2]
 ---
 {%- include mathjax.html -%}
 ![Tower of Hanoi](/assets/images/first-fundamental-theorem-of-calculus/AxRsePkxHAsdxpzUBsfHU4-1200-80.jpg.webp)
-# Background:
-The first fundamental theorem of calculus states the following:
-Let $f(x)$ be a continuous function defined on $[a,b] ⊂ ℝ$. For a given function 
-
-$$F(x) := ∫_a^x f(t) \,dt,  x ∈ [a,b]$$
-
-
-Then $F$ is uniformly continuous and differentiable on $(a,b)$ such that 
-$F'(x) = \frac{d}{dx} F(x) = f(x)$. 
-
-Where $\frac{d}{dx}F$ is defined as $\frac{d}{dx}F = \lim_{h → ∞} \frac{F(x+h)-F(x)}{h}$
-
-
-
-By re-arranging the first the fundamental theorem we can compute $F(x+α)$ for a given function $F$ and an arbitrary step $α$ such that $a ≤ x+α ≤b$: 
+An important question in mathematics are summations of polynomials. For example what is the closed formula for
 
 $$ 
 \begin{align*}
-F(x+α) =  F(x) + ∫_x^{x+α} f(t) \,dt &=  
-F(x) + ∫_x^{x+α} dF(t)  \\
-= F(x) + (F(x+\alpha) - F(x)) 
+\sum_{x=0}^{n} x = ?
 \end{align*}
 $$
 
+It turns out there is closed formula:
 
-
-In continuous calculus this equation relates a displacement $F(x+α)$ with the original function $F(x)$ and the integral of its derivate $\frac{d}{dx} F(x)$ over its displacement interval plus some arbitrary constant that is eventually cancelled called $Δ$.
-
-This is fine for the continuous case because we can find a derivate of $F(x)$, but what about discrete case where all of the assumptions of continuity are broken?
-We would like to find a relation between $F(x+α)$ and $F(x)$, such that given an unknown value $Δ$ we get $F(x) + Δ  = F(x+α)$ where $α \in ℕ⧵\\{0\\} $
-
-One might think, the answer is to add the derivate (it's not). 
-For example, suppose $F(x) = x^2$, then what is $F(x+1)$?
-We can write $(x+1)^2 = x^2 + Δ$, where $Δ$ is what we need to add to $F(x)$ to get to $F(x+1)$.
-Solving for $Δ$ we get:
-
-$$
+$$ 
 \begin{align*}
-(x+1)^2 &= x^2 + 2x + 1 \\
-        &= x^2 + Δ \\
-Δ &= 2x + 1
+\sum_{x=0}^{n} x = \frac{n(n+1)}{2}
 \end{align*}
 $$
 
-but this is would be wrong.
+This is a common and easy to prove formula but what about the summation of a monomial with a higher degree?
+For example what is 
 
-Going one degree up we will see that $Δ ≠ \frac{d}{dx}F(x)$ 
-
-$$
+$$ 
 \begin{align*}
-(x+1)^3 = x^3 + Δ \\
-Δ = 3x^2 +3x + 1 ≠ \frac{d}{dx}x^3 = 3x^2 
+\sum_{x=0}^{n} x^2 = ? 
 \end{align*}
 $$
 
-We are missing a few other non-constant terms. However, Discrete Calculus may provide an answer.
+While this one is also common and has a closed formula. We would like to have a systematic method of determining closed formulas summation of functions.
+In classical calculus, we have the fundamental theorem(s) of calculus that help us find the summation of a function over infinitely many small parts.
+The theorem states that if $f$ is uniformly continuous over the interval $[a,b] ⊂ ℝ$ then:
+
+$$ 
+\begin{align*}
+∫_{a}^{b} f(x)dx = F(b) - F(a)  \\
+\end{align*}
+$$
+where $F(x)$ is the antiderivative of $f(x)$.
+
+
+On the other hand the first part of theorem states that given a function $F(x)$ defined on an interval $[a,b] ⊂ ℝ$.
+Then for any $x ∈ [a,b]$:
+
+$$ 
+\begin{align*}
+F(x) = ∫_{a}^{x} f(t)dt\\
+\end{align*}
+$$
+
+we have 
+
+$$ 
+\begin{align*}
+\frac{dF(x)}{dx} = f(x),  ∀x∈(a,b) \\
+\end{align*}
+$$
+
+One can think of the fundamental theorem of calculus as two sides of the same coin that relate the derivate and antiderivate of a function. The question is then is there a similar relation in the discrete world. Recall that we cannot use the fundamental theorem of calculus here because our initial assumption of having function being uniformly continuous is never met. Discrete Calculus may provide an answer 
+
+
+Recall from our initial question of what is the sum of $x^2$ from $0 … n$. It turns out that
+
+
+$$ 
+\begin{align*}
+\sum_{x=0}^{n} x^2 = \frac{n(n+1)(2n+1)}{6} = \frac{2n^3 + 3n^2 + n}{6} 
+\end{align*}
+$$
+
+If this were an integral, on $x^2$ then
+
+
+$$ 
+\begin{align*}
+∫_{0}^{n}x^2dt = \frac{n^3}{3}\\
+\end{align*}
+$$
+
+
+These two are clearly different but the resulting polynomial have the same degree. This is not a coincidence.
 
 
 
@@ -74,7 +95,40 @@ We are missing a few other non-constant terms. However, Discrete Calculus may pr
 
 
 
-# Analysis:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 To get started with the basics of discrete calculus, we define functions on sets of the form 
 
 $ℕ_a := \\{ a, a+1, a+2, ... \\} $
