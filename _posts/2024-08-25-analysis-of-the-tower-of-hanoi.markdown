@@ -6,7 +6,7 @@ categories: jekyll update
 ---
 {%- include mathjax.html -%}
 # Introduction:
-The goal is to then move the disks in rod $A$ to rod $B$ with the following rules:
+For the tower of hanoi puzzle the goal is to move the disks in rod $A$ to rod $B$ with the following rules:
 
 1. Only a single disk can be moved at a time. 
 2. Only a disk from the top of a stack can be moved and it must be placed on top of another stack or an empty rod.
