@@ -160,7 +160,6 @@ $$
 \end{align*}
 $$
 
-given $f(0)=0$ which is the case for non-constant monomials.
 
 The theorem above states, roughly, that finding the sum of function $f$ over $x \in ℕ_0^{x-1}$ is equivalent to finding a function $F$ such that $ΔF(x) = f(x)$.
 
