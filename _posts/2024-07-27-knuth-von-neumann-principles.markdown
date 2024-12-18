@@ -20,5 +20,5 @@ categories: jekyll update
 
 
 
-[Reference Video Here](https://www.youtube.com/watch?v=g4lhrVPDUG0&t=3701s&ab_channel=BrownUniversity)
+[Reference Video Here](https://youtu.be/g4lhrVPDUG0)
 
