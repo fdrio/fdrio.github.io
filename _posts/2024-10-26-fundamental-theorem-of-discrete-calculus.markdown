@@ -140,10 +140,20 @@ f(x+1) = Δf(x) + f(x)
 \end{align*}
 $$
 
-Now one thing to note is the summation of these deltas $ΣΔf$ gives you the original function $f$. Namely $ΣΔf = f$. The proof is rather similar to the second part of the fundamental theorem of calculus:
+Now one thing to note is the summation of these deltas $ΣΔf$ gives you the original function $f$. Namely $ΣΔf = f$. The proof is rather similar to the fundamental theorem of calculus:
 
-**Proof**
+**Theorem:**
 
+$$ 
+\begin{align*}
+\sum_{n \in ℕ_a^{b-1}}f(n) = F(b) - F(a) ⟷ ΔF(x) = f(x)
+\end{align*}
+$$
+
+
+**Proof:**
+
+For the first part:
 
 $$ 
 \begin{align*}
@@ -152,18 +162,28 @@ $$
 ∎
 $$
 
-Notice the similarity with the second fundamental theorem of calculus. With this result we can define the following theorem:
+
+For the second part:
+
+Assume
 
 $$ 
 \begin{align*}
-\sum_{n \in ℕ_0^{x-1}}f(n) = F(x) ⟷ ΔF(x) = f(x)
+F(x) = \sum_{n=a}^{x-1} f(n) 
 \end{align*}
 $$
 
+Applying the forward difference operator on $F$ we get 
 
-The theorem above states, roughly, that finding the sum of function $f$ over $x \in ℕ_0^{x-1}$ is equivalent to finding a function $F$ such that $ΔF(x) = f(x)$.
+$$ 
+\begin{align*}
+\Delta F(x) = F(x+1) - F(x) = \sum_{n=a}^{x}f(n) - \sum_{n=a}^{x-1}f(n) = f(x)∎
+\end{align*}
+$$
 
-We can now answer our original question of how we could systematically find the answer to:  
+Notice the similarity with the second fundamental theorem of calculus. The theorem above states, roughly, that finding the sum of function $f$ over $x \in ℕ_0^{x-1}$ is equivalent to finding a function $F$ such that $ΔF(x) = f(x)$.
+
+We can now answer our original question of how we could systematically find the answer to:
 
 $$ 
 \begin{align*}
