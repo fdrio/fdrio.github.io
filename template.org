@@ -1,0 +1,39 @@
+#+TITLE: Calculus Notes
+#+AUTHOR: Francisco Diaz
+#+DATE: 2024-12-28
+
+* Introduction
+This document covers basic calculus concepts, including derivatives and integrals.
+
+* Definitions
+** Derivative
+The derivative of a function \( f(x) \) is defined as:
+\[ f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \]
+
+** Integral
+The integral of a function \( f(x) \) from \( a \) to \( b \) is given by:
+\[ \int_a^b f(x) \, dx \]
+
+* Theorems
+** Fundamental Theorem of Calculus
+If \( f(x) \) is continuous on \( [a, b] \), then:
+\[ \int_a^b f(x) \, dx = F(b) - F(a) \]
+where \( F(x) \) is the antiderivative of \( f(x) \).
+
+* Examples
+** Example 1: Derivative
+Find the derivative of \( f(x) = x^2 \):
+\[ f'(x) = 2x \]
+
+** Example 2: Integral
+Evaluate \( \int_0^2 x^2 \, dx \):
+\[
+\int_0^2 x^2 \, dx = \left[ \frac{x^3}{3} \right]_0^2 = \frac{8}{3}.
+\]
+
+* Exercises
+** Exercise 1: Compute a Derivative
+Find \( f'(x) \) for \( f(x) = \sin(x) \).
+
+** Exercise 2: Compute an Integral
+Evaluate \( \int_0^\pi \sin(x) \, dx \).
