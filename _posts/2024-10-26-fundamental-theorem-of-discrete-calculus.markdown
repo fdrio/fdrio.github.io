@@ -181,7 +181,7 @@ $$
 \end{align*}
 $$
 
-**Second part:**
+**- Second part:**
 
 
 $$ 
@@ -251,7 +251,7 @@ Doing some basic algebra we can express our original summation from
 
 $$ 
 \begin{align*}
-\sum_{x=0}^{n} x^2  
+\sum_{x=0}^{n} x^2
 \end{align*}
 $$
 
@@ -259,7 +259,7 @@ using $F(n)$, and since we proved
 
 $$ 
 \begin{align*}
-F(n)=\sum_{x \in ℕ_0^{n-1}}f(x)  
+F(n)=\sum_{x \in ℕ_0^{n-1}}f(x)
 \end{align*}
 $$
 
