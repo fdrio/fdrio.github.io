@@ -101,7 +101,7 @@ which means that at every point $x$ the gradient of the tangent at each point is
 But what about the rate of change of the discrete case? 
 This is where Discrete Calculus may provide an answer.
 
-# Discrete Calculus
+### Definitions
 To get started with the basics of discrete calculus, we must first define functions on sets of the form 
 
 $ℕ_a := \\{ a, a+1, a+2, ... \\} $
@@ -140,36 +140,36 @@ f(x+1) = Δf(x) + f(x)
 \end{align*}
 $$
 
-Now one thing to note is the summation of these deltas $ΣΔf$ gives you the original function $f$. Namely $ΣΔf = f$. The proof is rather similar to the fundamental theorem of calculus:
+Now one thing to note is the summation of these deltas $ΣΔf$ gives you the original function $f$. Namely $ΣΔf = f$. The proof is rather similar to the fundamental theorem of calculus.
 
-**Theorem:**
+
+
+## Fundamental Theorem of Discrete Calculus:
+
+##### **Theorem**:
 
 $$ 
 \begin{align*}
-\sum_{n \in ℕ_a^{b-1}}f(n) = F(b) - F(a) ⟷ ΔF(x) = f(x)
+ΔF(x) = f(x) ⟷ \sum_{n \in ℕ_a^{b-1}}f(n) = F(b) - F(a)
 \end{align*}
 $$
 
 
-**Proof:**
+##### **Proof**:
 
-For the first part:
+**- First part:**
+
+Let $G(x)$ be the antidifference of $f(x)$ and let $F(x)$ be any antidifference of $f(x)$. Such that
 
 $$ 
 \begin{align*}
-\sum_{x \in ℕ_a^{b-1}}Δf(x) = (f(a+1) - f(a)) + (f(a+2) - f(a+1)) + …  + (f(b) - f(b-1)) = f(b) - f(a) 
+G(x) = \sum_{n=a}^{x-1} f(n) 
 \end{align*}
-∎
 $$
 
-
-For the second part:
-
-Assume
-
 $$ 
 \begin{align*}
-F(x) = \sum_{n=a}^{x-1} f(n) 
+F(x) = G(x) + C  
 \end{align*}
 $$
 
@@ -177,9 +177,33 @@ Applying the forward difference operator on $F$ we get
 
 $$ 
 \begin{align*}
-\Delta F(x) = F(x+1) - F(x) = \sum_{n=a}^{x}f(n) - \sum_{n=a}^{x-1}f(n) = f(x)∎
+\Delta_x F(x) = \Delta_x G(x) + \Delta_x C = G(x+1) - G(x) = \sum_{n=a}^{x}f(n) - \sum_{n=a}^{x-1}f(n) = f(x)∎
 \end{align*}
 $$
+
+**Second part:**
+
+
+$$ 
+\begin{align*}
+\sum_{x \in ℕ_a^{b-1}}f(x) = \sum_{x \in ℕ_a^{b-1}}ΔF(x) = 
+\end{align*}
+$$
+
+$$ 
+\begin{align*}
+F(a+1) - F(a) + F(a+2) - F(a+1) + …  + F(b) - F(b-1) = \\ 
+\end{align*}
+$$
+
+$$ 
+\begin{align*}
+F(b) - F(a) 
+\end{align*}
+∎
+$$
+
+### Conclusion:
 
 Notice the similarity with the second fundamental theorem of calculus. The theorem above states, roughly, that finding the sum of function $f$ over $x \in ℕ_0^{x-1}$ is equivalent to finding a function $F$ such that $ΔF(x) = f(x)$.
 
