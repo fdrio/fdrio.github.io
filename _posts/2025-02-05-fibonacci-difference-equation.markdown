@@ -180,32 +180,44 @@ F(t) = \frac{1}{\sqrt{5}}\Bigg(\frac{1 + \sqrt{5}}{2}\Bigg)^{t} - \frac{1}{\sqrt
 \end{align*}
 $$
 
-
-This final expression for $F(t)$ demonstrates that the Fibonacci sequence at step $t$ is a function of the characteristic values of the recurrence relation, which are closely tied to the golden ratio. Specifically, the two characteristic roots are:
-
-$$ 
-\begin{align*}
-\lambda_1 = \frac{1+\sqrt{5}}{2}, \quad \lambda_2 = \frac{1-\sqrt{5}}{2}
-\end{align*}
-$$
-
-where $λ_1$ is the well-known golden ratio, often denoted as $ϕ$. The formula:
+**Conclusion**  
+In summary, we have shown that the solution to the Fibonacci difference equation, subject to the specified initial conditions, can be written in closed form as the **Binet's formula**:
 
 $$ 
 \begin{align*}
-F(t) = \frac{1}{\sqrt{5}}\Bigg(\frac{1 + \sqrt{5}}{2}\Bigg)^{t} - \frac{1}{\sqrt{5}}\Bigg(\frac{1 - \sqrt{5}}{2}\Bigg)^{t}
+F(t) \;=\; \frac{1}{\sqrt{5}}\biggl(\frac{1 + \sqrt{5}}{2}\biggr)^{t} \;-\; \frac{1}{\sqrt{5}}\biggl(\frac{1 - \sqrt{5}}{2}\biggr)^{t}.
 \end{align*}
 $$
 
-shows that the Fibonacci numbers can be expressed in terms of powers of $ϕ$ and its conjugate $λ_2$. As  $t$ increases, the influence of $λ_2^t$ diminishes due to its absolute value being less than $1$, leading to the well-known asymptotic approximation:
+
+Since the second term in the formula decays rapidly towards zero for large $t$, we obtain the following approximation:
 
 $$ 
 \begin{align*}
-F(t) \approx \frac{\phi^t}{\sqrt{5}}.
+F(t) \approx \frac{1}{\sqrt{5}} \biggl(\frac{1+\sqrt{5}}{2}\biggr)^t.
 \end{align*}
 $$
 
-This result not only provides an efficient way to compute Fibonacci numbers but also highlights the deep connection between Fibonacci sequences and the golden ratio, a fundamental constant that appears in numerous natural and mathematical contexts.
+This formula explicitly expresses $F(t)$ in terms of the two characteristic roots,  
+
+$$ 
+\begin{align*}
+\frac{-1 + \sqrt{5}}{2} \quad \text{and} \quad \frac{-1 - \sqrt{5}}{2},
+\end{align*}
+$$
+  
+which are related to the *golden ratio* 
+
+$$ 
+\begin{align*}
+ϕ \;=\; \frac{1 + \sqrt{5}}{2}.
+\end{align*}
+$$
+
+Consequently, the Fibonacci sequence at step $t$ is a function of powers of the golden ratio (and its conjugate). This reveals the deep connection between the Fibonacci sequence and $ϕ$, a constant that appears in many contexts spanning mathematics, art, and nature.
+
+
+
 
 <!-- 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
