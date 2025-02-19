@@ -155,7 +155,7 @@ c_1\Bigg(\frac{1+\sqrt{5}}{2}\Bigg)+c_2\Bigg(\frac{1 - \sqrt{5}}{2}\Bigg) = 1 \\
 (1 - c_2)\Bigg(\frac{1+\sqrt{5}}{2}\Bigg)+c_2\Bigg(\frac{1 - \sqrt{5}}{2}\Bigg) = 1 \\ \\
 \Bigg(\frac{1+\sqrt{5}}{2}\Bigg) - c_2 \Bigg(\frac{1+\sqrt{5}}{2}\Bigg) + c_2\Bigg(\frac{1 - \sqrt{5}}{2}\Bigg) = 1 \\ \\
 c_2 \Bigg[-\Bigg(\frac{1+\sqrt{5}}{2}\Bigg) + \Bigg(\frac{1 - \sqrt{5}}{2}\Bigg)\Bigg] = 1 - \Bigg(\frac{1+\sqrt{5}}{2}\Bigg) \\ \\
- -\sqrt{5}c_2 = \Bigg(\frac{1 - \sqrt{5}}{2}\Bigg) \\ \\ 
+ -\sqrt{5} c_2 = \Bigg(\frac{1 - \sqrt{5}}{2}\Bigg) \\ \\ 
  c_2 = \frac{-1}{\sqrt{5}}\Bigg(\frac{1 - \sqrt{5}}{2}\Bigg) 
 \end{align*}
 $$
